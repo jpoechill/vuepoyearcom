@@ -98,7 +98,7 @@
 </template>
 
 <script>
-import db from '~/components/firebaseInit'
+// import db from '~/components/firebaseInit'
 
 export default {
   data: () => {
@@ -111,46 +111,46 @@ export default {
     getItemsFromFirestore: function () {
       let self = this
 
-      db.collection(this.currCollection).get().then(function(querySnapshot) {
-        querySnapshot.forEach(function(doc) {
-          console.log('Doc ID: ' + doc.id)
-          self.$store.commit('updateFirestoreItems', { item: doc.data(), itemID: doc.id })
-        });
-      });
+      // db.collection(this.currCollection).get().then(function(querySnapshot) {
+      //   querySnapshot.forEach(function(doc) {
+      //     // console.log('Doc ID: ' + doc.id)
+      //     // self.$store.commit('updateFirestoreItems', { item: doc.data(), itemID: doc.id })
+      //   });
+      // });
     },
     initialize: function () {
       let self = this
       let currCollection = this.currCollection
 
       // clear the collection, and replace with local data (Vuex store)
-      db.collection(currCollection).get().then(function(querySnapshot) {
-        querySnapshot.forEach(function(doc) {
-          db.collection(currCollection).doc(doc.id).delete()
-        });
-      }).then(function() {
-        for (let item in self.$store.state.shopItems) {
-          let currItem = self.$store.state.shopItems[item]
+      // db.collection(currCollection).get().then(function(querySnapshot) {
+      //   querySnapshot.forEach(function(doc) {
+      //     db.collection(currCollection).doc(doc.id).delete()
+      //   });
+      // }).then(function() {
+      //   for (let item in self.$store.state.shopItems) {
+      //     let currItem = self.$store.state.shopItems[item]
 
-          // provide an index num for reference
-          currItem['index'] = Number(item)
-          db.collection(currCollection).add(currItem)
-        }
-      });
+      //     // provide an index num for reference
+      //     currItem['index'] = Number(item)
+      //     db.collection(currCollection).add(currItem)
+      //   }
+      // });
     }
   },
   created: function () {
-    let self = this
+    // let self = this
 
-    if (this.useCloudData) {
-      this.getItemsFromFirestore()
-    } else {
-      for (let item in self.$store.state.shopItems) {
-        let currItem = self.$store.state.shopItems[item]
+    // if (this.useCloudData) {
+    //   this.getItemsFromFirestore()
+    // } else {
+    //   for (let item in self.$store.state.shopItems) {
+    //     let currItem = self.$store.state.shopItems[item]
 
-        currItem['index'] = Number(item)
-        self.$store.commit('updateFirestoreItems', { item: currItem, itemID: '' })
-      }
-    }
+    //     currItem['index'] = Number(item)
+    //     self.$store.commit('updateFirestoreItems', { item: currItem, itemID: '' })
+    //   }
+    // }
 
     // use this function for flushing
     // out data (collections) on the cloud

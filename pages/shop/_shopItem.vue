@@ -87,7 +87,7 @@ export default {
     },
     addToCart: function () {
       // alert('Add to Cart ' + this.currentItem.quantity)
-      this.$store.commit('addItemToCart', this.currentItem)
+      // this.$store.commit('addItemToCart', this.currentItem)
     },
     goHome: function () {
       this.$router.push('/shop')

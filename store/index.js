@@ -320,25 +320,25 @@ const createStore = () => {
                 state.firestoreShopItems.length = 0
             },
             updateFirestoreItems(state, { item, itemID }) {
-                Vue.set(item, 'itemID', itemID)
-                console.log('ADD: ' + item.index)
+                // Vue.set(item, 'itemID', itemID)
+                // console.log('ADD: ' + item.index)
 
                 // console.log('Setting: ' + itemIndex)
-                Vue.set(state.firestoreShopItems, item.index, item);
+                // Vue.set(state.firestoreShopItems, item.index, item);
 
                 // state.firestoreShopItems.push(item)
             },
             deleteFirestoreItem(state, {itemID, index}) {
                 // alert('Deleting... ' + itemID)
 
-                db.collection("items").doc(itemID).delete().then(function () {
-                    console.log("Document successfully deleted!");
-                }).catch(function (error) {
-                    console.error("Error removing document: ", error);
-                });
+                // db.collection("items").doc(itemID).delete().then(function () {
+                //     console.log("Document successfully deleted!");
+                // }).catch(function (error) {
+                //     console.error("Error removing document: ", error);
+                // });
 
                 // state.counter++
-                state.firestoreShopItems.splice(index, 1)
+                // state.firestoreShopItems.splice(index, 1)
             }
         }
     })

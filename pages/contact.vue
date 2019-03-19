@@ -12,7 +12,7 @@
             message <br><textarea name="body" class="w-100" rows="6"></textarea><br>
             <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
             <input type='hidden' name='redirect_to' value='https://poyear.com' />
-            <input type='submit' value='leave message' class="w-100 font-custom" />
+            <input type='submit' value='leave a message' class="w-100 font-custom" />
           </form>
           </div>
         </transition>

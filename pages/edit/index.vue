@@ -57,15 +57,15 @@ export default {
     getItemsFromFirestore: function () {
       let self = this
 
-      self.$store.commit('clearStateItems')
+      // self.$store.commit('clearStateItems')
 
-      db.collection("items").get().then(function(querySnapshot) {
-        querySnapshot.forEach(function(doc) {
-          console.log(doc.id, " => ", doc.data());
+      // db.collection("items").get().then(function(querySnapshot) {
+      //   querySnapshot.forEach(function(doc) {
+      //     console.log(doc.id, " => ", doc.data());
           
-          self.$store.commit('updateFirestoreItems', doc.data())
-        });
-      });
+      //     self.$store.commit('updateFirestoreItems', doc.data())
+      //   });
+      // });
     },
     deleteItem: function (itemID, index) {
       let self = this
@@ -75,28 +75,28 @@ export default {
       }
     },
     saveItem: function (item) {
-      console.log('Saving: ' + item.itemName)
+      // console.log('Saving: ' + item.itemName)
 
-      db.collection("items").doc(item.itemID).update(item)
-      .then(function() {
+      // db.collection("items").doc(item.itemID).update(item)
+      // .then(function() {
 
-        alert('Changes saved.')
-        console.log("Document successfully updated!");
-      })
-      .catch(function(error) {
-          // The document probably doesn't exist.
-          console.error("Error updating document: ", error);
-      });
+      //   alert('Changes saved.')
+      //   console.log("Document successfully updated!");
+      // })
+      // .catch(function(error) {
+      //     // The document probably doesn't exist.
+      //     console.error("Error updating document: ", error);
+      // });
 
       // this.getItemsFromFirestore()
     },
     logIn: function () {
-      this.$store.commit('logIn')
+      // this.$store.commit('logIn')
     },
     logOut: function () {
       alert('Logout')
 
-      this.$router.push('/shop')
+      // this.$router.push('/shop')
     }
   },
   created: function () {

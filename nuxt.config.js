@@ -28,7 +28,7 @@ module.exports = {
       },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Gaegu" rel="stylesheet'
+        href: 'https://fonts.googleapis.com/css?family=Gaegu'
       }
     ],
     script: [
@@ -55,6 +55,9 @@ module.exports = {
   /*
   ** Build configuration
   */
+  output: {
+    publicPath: ''
+  },
   build: {
     /*
     ** Run ESLint on save
