@@ -67,11 +67,11 @@
     </div> -->
     <nuxt></nuxt>
     <div class="container footer">
-      <!-- <div class="row">
-        <div class="col-md-12">
-          <hr>
+      <div class="row">
+        <div class="col-md-12 mb-4">
+          <img src="/swiggle-bottom.png" class="w-100" alt="">
         </div>
-      </div> -->
+      </div>
       <div class="row font-custom">
         <!-- for Desktop -->
         <div class="col-md-12 d-none d-md-block text-center">
