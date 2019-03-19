@@ -7,7 +7,7 @@
             <nuxt-link to="/"><img class="logo-img" src="/logo-mark-2019.png" alt="POYEAR.COM"></nuxt-link>
           </span>
           <span class="logo logo-sm d-md-none">
-            <nuxt-link to="/"><img class="logo-img-sml" src="/cupcake.png" alt="POYEAR.COM"></nuxt-link>
+            <nuxt-link to="/"><img class="logo-img-sml" src="/logo-mark-2019.png" alt="POYEAR.COM"></nuxt-link>
           </span>
         </div>
       </div>
@@ -75,7 +75,6 @@
       <div class="row font-custom">
         <!-- for Desktop -->
         <div class="col-md-12 d-none d-md-block text-center">
-          
           <div class="mb-3">
             crafted by hand from Oakland, CA
           </div>
@@ -84,10 +83,12 @@
           <a href="https://www.facebook.com/poyear.rith"><i class="fab fa-facebook font-awesome"></i></a>
         </div>
       </div>
-      <div class="row d-md-none">
+      <div class="row d-md-none font-custom">
         <!-- for Mobile -->
-        <div class="col-md-6">
-          Crafted by hand in Oakland, CA <br><br>
+        <div class="col-md-6 text-center">
+          <div class="mb-3">
+            crafted by hand from Oakland, CA
+          </div>
           <a href="https://twitter.com/poyearrith"><i class="fab fa-twitter font-awesome-left"></i></a>
           <a href="https://www.instagram.com/poyear/"><i class="fab fa-instagram font-awesome-left"></i></a>
           <a href="https://www.facebook.com/poyear.rith"><i class="fab fa-facebook font-awesome-left"></i></a>
@@ -209,8 +210,8 @@ html {
 
 
 .logo-img-sml {
-  width: 44px;
-  margin: 28px 0px;
+  width: 170px;
+  margin: 28px 0px 10px;
 }
 
 a:hover {
