@@ -171,12 +171,12 @@ html {
 }
 
 .nav-container a, a:link, a:active, a:visited {
-  color: #333;
+  color: #111;
   text-decoration: none;
 }
 
 .nav-container a:hover {
-  color: #333;
+  color: #111;
   text-decoration: none;
   border-bottom: 3px solid lightpink;
   padding-bottom: 4px;
@@ -230,7 +230,7 @@ a:hover {
   margin-bottom: 30px;
   margin-top: -8px;
   font-weight: 500;
-  color: #333;
+  color: #111;
   letter-spacing: 2px;
 }
 
@@ -239,7 +239,7 @@ a:hover {
 }
 
 .nav-links {
-  color: #333;
+  color: #111;
   font-size: 14px;
   font-weight: 500;
 }
@@ -255,7 +255,7 @@ a:hover {
 }
 
 .footer a {
-  color: #333;
+  color: #111;
 }
 
 .font-awesome {
