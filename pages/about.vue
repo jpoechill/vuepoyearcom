@@ -5,19 +5,20 @@
         <div class="col-md-12">
           <transition name="fade" appear>
             <div style="position: relative">
-              <div class="text-center col-md-12 d-none d-md-block img-about-text">
+              <!-- <div class="text-center col-md-12 d-none d-md-block img-about-text">
                 ABOUT <br> –
               </div>
               <div class="text-center col-md-12 d-md-none img-about-text img-about-text-sml">
                 ABOUT <br> –
-              </div>
+              </div> -->
               <div class="img-about-container">
-                  <img src="/ocean_grl.jpg" class="img-about" alt="">
+                  <img src="/about-page-03.jpeg" class="img-about" alt="">
               </div>
             </div>
           </transition>
-          <div class="about-text">
-            Poyear has been baking cupcakes since 2012. She is the mother of 2 mixed-race girls, Peyton and Olivia.      
+          <div class="about-text font-custom text-center pb-4">
+            Poyear has been baking cupcakes since 2012. <br> 
+            She is the mother of 2 mixed-race girls, Peyton and Olivia.      
           </div>
         </div>
       </div>

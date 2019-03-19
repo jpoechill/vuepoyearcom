@@ -11,6 +11,34 @@ const createStore = () => {
             firestoreShopItems: [],
             shopItems: [
                 {
+                  itemName: 'Carrot',
+                  itemShrtName: 'carrot',
+                  itemImg: '/thumbs/carrot_thumb.jpg',
+                  itemDetailImgs: [
+                    '/hires/carrot/carrot_01.jpeg',
+                    '/hires/carrot/carrot_02.jpeg',
+                    '/hires/carrot/carrot_03.jpeg',
+                  ],
+                  price: '$28/dozen',
+                  visible: true,
+                  description: 'carrot cupcakes with a vanilla bean cream cheese frosting',
+                  url: '/shop/carrot'
+                },
+                {
+                  itemName: 'S\'mores',
+                  itemShrtName: 'smores',
+                  itemImg: '/thumbs/smores.png',
+                  itemDetailImgs: [
+                    '/hires/smores/smores1.png',
+                    '/hires/smores/smores2.png',
+                    '/hires/smores/smores3.png',
+                  ],
+                  price: '$28/dozen',
+                  visible: true,
+                  description: 's’mores brownie cups with a graham cracker crust topped with homemade marshmallow fluff',
+                  url: '/shop/smores'
+                },
+                {
                   itemName: 'Red Velvet',
                   itemShrtName: 'red-velvet',
                   itemImg: '/thumbs/redvelvet.jpg',
@@ -47,7 +75,7 @@ const createStore = () => {
                         '/hires/yogurt/yogurt3.jpg',
                         '/hires/yogurt/yogurt.jpg'
                     ],
-                    price: '$25/dozen',
+                    price: '$28/dozen',
                     visible: true,
                     description: 'lemon cupcakes with berry cream cheese frosting',
                     url: '/shop/lemon-berry'

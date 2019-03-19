@@ -4,6 +4,7 @@ module.exports = {
   */
   generate: {
     routes: [
+      '/shop/smores',
       '/shop/red-velvet',
       '/shop/ferrero',
       '/shop/yogurt',
@@ -27,7 +28,7 @@ module.exports = {
       },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Gochi+Hand'
+        href: 'https://fonts.googleapis.com/css?family=Gaegu" rel="stylesheet'
       }
     ],
     script: [

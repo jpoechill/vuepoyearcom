@@ -1,18 +1,18 @@
 <template>
   <div>
     <div class="container contact-container">
-      <div class="row">
+      <div class="row font-custom">
         <transition name="fade" appear>
-          <div class="offset-md-4 col-md-4">
-            <span class="contact-header">Contact</span> <br>
+          <div class="offset-md-2 col-md-8">
+            <div class="contact-header text-center w-100">leave me a message!</div>
             <form action="https://getsimpleform.com/messages?form_api_token=ac2fde00ae6aeab4808aab1389938e7f" method="post">
-            Name <br><input name='name' type="text" size="40"><br>
-            Email <br><input name='email' type="text" size="40"><br>
-            Subject <br><input name='subject' type="text" size="40"><br>
-            Message <br><textarea name="body" id="" cols="40" rows="6"></textarea><br>
+            name <br><input name='name' type="text" class="w-100"><br>
+            email <br><input name='email' type="text" class="w-100"><br>
+            subject <br><input name='subject' type="text" class="w-100"><br>
+            message <br><textarea name="body" class="w-100" rows="6"></textarea><br>
             <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
             <input type='hidden' name='redirect_to' value='https://poyear.com' />
-            <input type='submit' value='Submit' />
+            <input type='submit' value='leave message' class="w-100 font-custom" />
           </form>
           </div>
         </transition>
@@ -37,8 +37,13 @@ export default {
 }
 
 .contact-header {
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 500;
+}
+
+input, textarea {
+  padding: 4px;
+  border-radius: 4px;
 }
 
 input[type=submit], button {
@@ -46,7 +51,7 @@ input[type=submit], button {
   background:#FFF; 
   border: 2px solid #333;
   -webkit-border-radius: 0px;
-  border-radius: 0px; 
+  border-radius: 10px; 
   cursor: pointer;
 }
 

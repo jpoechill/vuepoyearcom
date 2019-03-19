@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="container">
-      <div class="row">
-        <div v-for="(item) in $store.state.firestoreShopItems" v-if="item.visible" v-bind:key="item.itemName" class="col-md-4">
+      <div class="row font-custom">
+        <div v-for="(item) in $store.state.shopItems" v-if="item.visible" v-bind:key="item.itemName" class="col-md-4">
           <transition name="fade" appear>
             <div class="img-container">
               <nuxt-link :to="item.url">
@@ -61,7 +61,7 @@ export default {
 }
 
 .overlay {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(0, 0, 0, 0.3);
   opacity: 0;
   padding-bottom: 100%;
   width: 100%;
@@ -74,7 +74,7 @@ export default {
 .overlay-info {
   opacity: 0;
   padding-bottom: 100%;
-  padding-top: 40%;
+  padding-top: 30%;
   width: 100%;
   position: absolute;
   z-index: 12;
@@ -88,12 +88,12 @@ export default {
   text-transform: uppercase;
   color: #FFF;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 40px;
 }
 
 .item-price-main {
   color: #FFF;
-  font-size: 18px;
+  font-size: 30px;
 }
 
 .img-container-child {

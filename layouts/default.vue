@@ -4,14 +4,32 @@
       <div class="row header">
         <div class="col-md-12 text-center">
           <span class="logo logo-lrg d-none d-md-block">
-            <nuxt-link to="/"><img class="logo-img" src="/logo-lrg.png" alt="POYEAR.COM"></nuxt-link>
+            <nuxt-link to="/"><img class="logo-img" src="/logo-mark-2019.png" alt="POYEAR.COM"></nuxt-link>
           </span>
           <span class="logo logo-sm d-md-none">
             <nuxt-link to="/"><img class="logo-img-sml" src="/cupcake.png" alt="POYEAR.COM"></nuxt-link>
           </span>
         </div>
       </div>
-      <div class="row header-details">
+      <div class="row text-center font-custom">
+        <div class="col-md-12">
+        <nuxt-link to="/">poyear.com</nuxt-link>
+        </div>
+      </div>
+      <div class="row text-center font-custom pb-4">
+        <div class="col-md-4">
+          <img src="/swiggle-left.png" class="w-100" alt="">
+        </div>
+        <div class="col-md-4">
+          <nuxt-link to="/about">about</nuxt-link>&nbsp;
+          <nuxt-link to="/shop">shop</nuxt-link>&nbsp;
+          <nuxt-link to="/contact">contact</nuxt-link>&nbsp;
+        </div>
+        <div class="col-md-4">
+          <img src="/swiggle-right.png" class="w-100" alt="">
+        </div>
+      </div>
+      <!-- <div class="row header-details">
         <div class="col-md-4  d-none d-md-block text-left">
           POYEAR RITH
         </div>
@@ -26,9 +44,9 @@
           OAKLAND, CA<br>
           510-409-8204<br>
         </div>
-      </div>
+      </div> -->
     </div>
-    <div class="container nav-container">
+    <!-- <div class="container nav-container">
       <div class="row" style="position: relative;">
         <div class="col-md-12 nav-links text-center word-spacing" style="z-index: 100; padding-top: 5px; position: absolute;">
           <span style="background-color: #FFF; padding: 0px 30px;">
@@ -46,25 +64,28 @@
           <hr>
         </div>
       </div>
-    </div>
+    </div> -->
     <nuxt></nuxt>
     <div class="container footer">
-      <div class="row">
+      <!-- <div class="row">
         <div class="col-md-12">
           <hr>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 d-none d-md-block">
-          Crafted by hand in Oakland, CA
-        </div>
-        <div class="col-md-6 d-none d-md-block text-right">
+      </div> -->
+      <div class="row font-custom">
+        <!-- for Desktop -->
+        <div class="col-md-12 d-none d-md-block text-center">
+          
+          <div class="mb-3">
+            crafted by hand from Oakland, CA
+          </div>
           <a href="https://twitter.com/poyearrith"><i class="fab fa-twitter font-awesome"></i></a>
           <a href="https://www.instagram.com/poyear/"><i class="fab fa-instagram font-awesome"></i></a>
           <a href="https://www.facebook.com/poyear.rith"><i class="fab fa-facebook font-awesome"></i></a>
         </div>
       </div>
-      <div class="row  d-md-none">
+      <div class="row d-md-none">
+        <!-- for Mobile -->
         <div class="col-md-6">
           Crafted by hand in Oakland, CA <br><br>
           <a href="https://twitter.com/poyearrith"><i class="fab fa-twitter font-awesome-left"></i></a>
@@ -150,12 +171,12 @@ html {
 }
 
 .nav-container a, a:link, a:active, a:visited {
-  color: #999;
+  color: #333;
   text-decoration: none;
 }
 
 .nav-container a:hover {
-  color: #555;
+  color: #333;
   text-decoration: none;
   border-bottom: 3px solid lightpink;
   padding-bottom: 4px;
@@ -171,20 +192,30 @@ html {
   font-size: 80px;
 }
 
+.font-custom {
+  font-family: 'Gaegu', cursive;
+  font-size: 32px;
+}
+
 .logo-sm {
   font-size: 50px;
 }
 
 
 .logo-img {
-  width: 400px;
-  padding: 30px 0px;
+  max-width: 175px;
+  padding: 30px 0px 6px;
 }
 
 
 .logo-img-sml {
   width: 44px;
   margin: 28px 0px;
+}
+
+a:hover {
+  color: lightpink;
+  /* border-bottom: 3px solid lightpink; */
 }
 
 .logo a {
@@ -199,7 +230,7 @@ html {
   margin-bottom: 30px;
   margin-top: -8px;
   font-weight: 500;
-  color: #999;
+  color: #333;
   letter-spacing: 2px;
 }
 
@@ -208,7 +239,7 @@ html {
 }
 
 .nav-links {
-  color: #555;
+  color: #333;
   font-size: 14px;
   font-weight: 500;
 }
