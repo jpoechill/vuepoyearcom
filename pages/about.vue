@@ -12,7 +12,7 @@
                 ABOUT <br> –
               </div> -->
               <div class="img-about-container">
-                  <img src="/about-page-03.jpeg" class="img-about" alt="">
+                  <img src="/about-page-04.png" class="img-about" alt="">
               </div>
             </div>
           </transition>
