@@ -2,7 +2,7 @@
   <div>
     <div class="container">
       <div class="row font-custom">
-        <div v-for="(item) in $store.state.shopItems" v-if="item.visible" v-bind:key="item.itemName" class="col-md-4">
+        <div v-for="(item) in $store.state.shopItems" v-if="item.visible" v-bind:key="item.itemName" class="col-md-3">
           <transition name="fade" appear>
             <div class="img-container">
               <nuxt-link :to="item.url">
