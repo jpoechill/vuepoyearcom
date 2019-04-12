@@ -2,13 +2,15 @@
   <div>
     <div class="container">
       <div class="row font-custom">
-        <div v-for="(item) in $store.state.shopItems" v-if="item.visible" v-bind:key="item.itemName" class="col-md-3">
+        <div v-for="(item) in $store.state.shopItems" v-bind:key="item.itemName" class="col-md-4">
           <transition name="fade" appear>
-            <div class="img-container">
+            <div v-if="item.visible" class="img-container" ref="imgContainer">
               <nuxt-link :to="item.url">
-                <div class="overlay-info text-center">
-                  <span class="item-title-main">{{ item.itemName }}</span><br>
-                  <span class="item-price-main">{{ item.price }}</span>
+                <div class="overlay-info text-center d-flex align-items-center" :style="{ height: containerWidth + 'px' }">
+                  <div class="w-100 text-center">
+                    <span class="item-title-main">{{ item.itemName }}</span><br>
+                    <span class="item-price-main">{{ item.price }}</span>
+                  </div>
                 </div>
                 <div class="overlay"></div>
                 <div class="img-container-child">
@@ -26,9 +28,26 @@
 <script>
 export default {
   data: function () {
-    return {}
+    return {
+      containerWidth: null
+    }
   },
-  components: {}
+  components: {},
+  methods: {
+    updateWidth: function () {
+      if (this.$refs.imgContainer[0]) {
+        this.containerWidth = this.$refs.imgContainer[0].clientWidth
+      }
+    }
+  },
+  mounted(){
+      this.updateWidth()
+      let self = this
+
+      window.addEventListener('resize', function() {
+        self.updateWidth()
+      });
+  }
 }
 </script>
 
@@ -73,8 +92,8 @@ export default {
 
 .overlay-info {
   opacity: 0;
-  padding-bottom: 100%;
-  padding-top: 30%;
+  /* padding-bottom: 100%;
+  padding-top: 30%; */
   width: 100%;
   position: absolute;
   z-index: 12;

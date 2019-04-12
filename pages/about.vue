@@ -1,27 +1,22 @@
 <template>
   <div>
     <div class="container about-container">
-      <div class="row">
-        <div class="col-md-12">
-          <transition name="fade" appear>
-            <div style="position: relative">
-              <!-- <div class="text-center col-md-12 d-none d-md-block img-about-text">
-                ABOUT <br> –
-              </div>
-              <div class="text-center col-md-12 d-md-none img-about-text img-about-text-sml">
-                ABOUT <br> –
-              </div> -->
-              <div class="img-about-container">
-                  <img src="/about-page-04.png" class="img-about" alt="">
-              </div>
+      <transition name="fade" appear>
+        <div class="row">
+          <div class="col-md-8 mb-4">
+            <div class="img-about-container">
+                <img src="/about-page-05.jpeg" class="img-about" alt="">
             </div>
-          </transition>
-          <div class="about-text font-custom text-center pb-4">
-            Poyear has been baking cupcakes since 2012. <br> 
-            She is the mother of 2 mixed-race girls, Peyton and Olivia.      
+          </div>
+          <div class="col-md-4">
+            <div class="font-custom text-left pb-4">
+              Poyear has been baking cupcakes since 2012. <br><br>
+              She specializes in decorative cupcakes, macarons, and multi-layered cakes. <br><br>
+              Poyear is the mother of 2 mixed-race girls, Peyton and Olivia.      
+            </div>
           </div>
         </div>
-      </div>
+      </transition>
     </div>
   </div>
 </template>
@@ -57,9 +52,5 @@ export default {
 
 .about-container {
   margin-bottom: 15px;
-}
-
-.about-text {
-  margin-top: 30px;
 }
 </style>

@@ -14,7 +14,7 @@ module.exports = {
     ]
   },
   head: {
-    title: 'Poyear.com',
+    title: 'Poyear.com | Specialty and Gourment Baking from Oakland, Ca',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

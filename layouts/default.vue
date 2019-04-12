@@ -1,75 +1,76 @@
 <template>
   <div>
     <div class="container ">
-      <div class="row header">
-        <div class="col-md-12 text-center">
-          <span class="logo logo-lrg d-none d-md-block">
-            <nuxt-link to="/"><img class="logo-img" src="/logo-mark-2019.png" alt="POYEAR.COM"></nuxt-link>
-          </span>
-          <span class="logo logo-sm d-md-none">
-            <nuxt-link to="/"><img class="logo-img-sml" src="/logo-mark-2019.png" alt="POYEAR.COM"></nuxt-link>
-          </span>
+      <!-- Desktop View, Logo Header -->
+      <div class=" d-none d-md-block">
+        <div class="position-absolute w-100">
+          <div class="row">
+            <div class="col-md-5 text-center">
+              <img src="/stripe-left.png" class="w-custom pt-5" alt="POYEAR.COM">
+            </div>
+            <div class="col-md-5 offset-md-2 text-center">
+              <img src="/stripe-right.png" class="w-custom pt-5" alt="POYEAR.COM">
+            </div>
+          </div>
+        </div>
+        <div class="row header">
+          <div class="col-md-4">
+            <a href="https://instagram.com/poyearcom">
+              <img src="/ig-glyph.png" class="logo-img w-10" alt="POYEAR.COM">
+            </a>
+          </div>
+          <div class="col-md-4 text-center">
+            <span class="logo logo-lrg">
+              <nuxt-link to="/"><img class="logo-img" src="/logo-mark-2019.png" alt="POYEAR.COM"></nuxt-link>
+            </span>
+          </div>
         </div>
       </div>
+      <!-- End Desktop View, Logo Header -->
+      <!-- Start Mobile View, Logo Header -->
+      <div class="d-md-none">
+        <div class="row header d-md-none">
+          <div class="col-md-4 position-absolute z-index-top">
+            <a href="https://instagram.com/poyearcom">
+              <img src="/ig-glyph.png" class="logo-img w-10" alt="POYEAR.COM">
+            </a>
+          </div>
+          <div class="col-md-12 text-center">
+            <span class="logo logo-sm">
+              <nuxt-link to="/"><img class="logo-img-sml" src="/logo-mark-2019.png" alt="POYEAR.COM"></nuxt-link>
+            </span>
+          </div>
+        </div>
+      </div>
+      <!-- End Mobile View, Logo Header -->
+      <!-- Start Nav -->
       <div class="row text-center font-custom">
         <div class="col-md-12">
         <nuxt-link to="/">poyear.com</nuxt-link>
         </div>
       </div>
       <div class="row text-center font-custom pb-4">
-        <div class="col-md-4">
-          <img src="/swiggle-left.png" class="w-100" alt="">
-        </div>
-        <div class="col-md-4">
+        <div class="col-md-12">
           <nuxt-link to="/about">about</nuxt-link>&nbsp;
           <nuxt-link to="/shop">shop</nuxt-link>&nbsp;
           <nuxt-link to="/contact">contact</nuxt-link>&nbsp;
         </div>
-        <div class="col-md-4">
-          <img src="/swiggle-right.png" class="w-100" alt="">
+      </div>
+      <div class="d-md-none">
+        <div class="row">
+          <div class="col-md-4 offset-md-4 mb-4 text-center">
+            <img src="/stripe-top.png" class="w-100" alt="">
+          </div>
         </div>
       </div>
-      <!-- <div class="row header-details">
-        <div class="col-md-4  d-none d-md-block text-left">
-          POYEAR RITH
-        </div>
-        <div class="col-md-4  d-none d-md-block text-center">
-        OAKLAND, CA
-        </div>
-        <div class="col-md-4  d-none d-md-block text-right">
-          510-409-8204
-        </div>
-        <div class="col-md-12 d-md-none text-center">
-          POYEAR RITH<br>
-          OAKLAND, CA<br>
-          510-409-8204<br>
-        </div>
-      </div> -->
+      <!-- End Nav -->
     </div>
-    <!-- <div class="container nav-container">
-      <div class="row" style="position: relative;">
-        <div class="col-md-12 nav-links text-center word-spacing" style="z-index: 100; padding-top: 5px; position: absolute;">
-          <span style="background-color: #FFF; padding: 0px 30px;">
-            <nuxt-link to="/about">ABOUT</nuxt-link>&nbsp;
-            <nuxt-link to="/shop">SHOP</nuxt-link>&nbsp;
-            <span v-if="$store.state.shopping">
-              <nuxt-link to="/cart">CART</nuxt-link>&nbsp;
-            </span>
-            <nuxt-link to="/contact">CONTACT</nuxt-link>
-          </span>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <hr>
-        </div>
-      </div>
-    </div> -->
     <nuxt></nuxt>
+    <!-- Start Footer -->
     <div class="container footer">
       <div class="row">
-        <div class="col-md-12 mb-4">
-          <img src="/swiggle-bottom.png" class="w-100" alt="">
+        <div class="col-md-4 offset-md-4 mb-4 text-center">
+          <img src="/stripe-bottom.png" class="w-100" alt="">
         </div>
       </div>
       <div class="row font-custom">
@@ -181,6 +182,31 @@ html {
   text-decoration: none;
   border-bottom: 3px solid lightpink;
   padding-bottom: 4px;
+}
+
+
+.z-index-top {
+  z-index: 100;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.w-10 {
+  width: 10%;
+}
+
+.w-custom {
+  width: 60%;
+}
+
+.w-15 {
+  width: 15%;
+}
+
+.w-30 {
+  width: 30%;
 }
 
 .logo {
