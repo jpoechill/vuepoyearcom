@@ -49,7 +49,7 @@ const createStore = () => {
                     '/hires/carrot/carrot-02.jpeg',
                     '/hires/carrot/carrot-03.jpeg',
                   ],
-                  price: '$28/dozen',
+                  price: '$30/dozen',
                   visible: true,
                   description: 'carrot cupcakes with a vanilla bean cream cheese frosting',
                   url: '/shop/carrot'
@@ -62,7 +62,7 @@ const createStore = () => {
                     '/hires/smores/smores-04.jpeg',
                     '/hires/smores/smores-05.jpeg',
                   ],
-                  price: '$28/dozen',
+                  price: '$30/dozen',
                   visible: true,
                   description: 's’mores brownie cups with a graham cracker crust topped with homemade marshmallow fluff',
                   url: '/shop/smores'
@@ -76,7 +76,7 @@ const createStore = () => {
                     '/hires/red-velvet/red-velvet-01.jpg',
                     '/hires/red-velvet/red-velvet-03.jpg',
                   ],
-                  price: '$25/dozen',
+                  price: '$30/dozen',
                   visible: true,
                   description: 'red velvet with cream cheese frosting',
                   url: '/shop/red-velvet'
@@ -104,7 +104,7 @@ const createStore = () => {
                         '/hires/yogurt/yogurt3.jpg',
                         '/hires/yogurt/yogurt.jpg'
                     ],
-                    price: '$28/dozen',
+                    price: '$30/dozen',
                     visible: true,
                     description: 'lemon cupcakes with berry cream cheese frosting',
                     url: '/shop/lemon-berry'
@@ -116,7 +116,7 @@ const createStore = () => {
                     '/hires/twix/twix-02.jpeg',
                     '/hires/twix/twix-01.jpg'
                   ],
-                  price: '$28/dozen',
+                  price: '$30/dozen',
                   visible: true,
                   description: 'chocolate cupcakes filled with twix, topped with cream cheese frosting, chopped shortbread cookies, a drizzle of both chocolate ganache and caramel sauce',
                   url: '/shop/twix'
@@ -129,7 +129,7 @@ const createStore = () => {
                     '/hires/snicker/snicker-02.jpeg',
                     '/hires/snicker/snicker-01.jpg'
                   ],
-                  price: '$28/dozen',
+                  price: '$30/dozen',
                   visible: true,
                   description: 'chocolate cupcakes filled with snickers, topped with cream cheese frosting, chopped snickers and a drizzle of caramel sauce',
                   url: '/shop/snickers'
@@ -141,7 +141,7 @@ const createStore = () => {
                     itemDetailImgs: [
                         '/hires/mocha.jpg'
                     ],
-                    price: '$25/dozen',
+                    price: '$30/dozen',
                     visible: true,
                     description: 'coffee infused chocolate cupcakes topped with mocha cream cheese frosting',
                     url: '/shop/mocha'

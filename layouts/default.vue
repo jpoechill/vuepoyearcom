@@ -21,7 +21,7 @@
           </div>
           <div class="col-md-4 text-center">
             <span class="logo logo-lrg">
-              <nuxt-link to="/"><img class="logo-img" src="/logo-mark-2019.png" alt="POYEAR.COM"></nuxt-link>
+              <nuxt-link to="/"><img class="logo-img" src="/logo-mark-02-2019.png" alt="POYEAR.COM"></nuxt-link>
             </span>
           </div>
         </div>
