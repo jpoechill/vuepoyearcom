@@ -161,7 +161,7 @@ const createStore = () => {
             ],
             testItems: [
                 {
-                    itemName: 'Red Velvet',
+                    itemName: 'Red Velvet Test',
                     itemShrtName: 'red-velvet',
                     itemImg: '/temp-02.png',
                     itemDetailImgs: [
