@@ -53,6 +53,7 @@
         <div class="col-md-12">
           <nuxt-link to="/about">about</nuxt-link>&nbsp;
           <nuxt-link to="/shop">shop</nuxt-link>&nbsp;
+          <nuxt-link to="/instagram">instagram</nuxt-link>&nbsp;
           <nuxt-link to="/contact">contact</nuxt-link>&nbsp;
         </div>
       </div>

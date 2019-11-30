@@ -2,7 +2,7 @@
   <div>
     <div class="container">
       <div class="row font-custom">
-        <div v-for="(item) in $store.state.shopItems" v-bind:key="item.itemName" class="col-md-4">
+        <div class="col-md-4" v-for="(item) in $store.state.shopItems" v-bind:key="item.itemName">
           <transition name="fade" appear>
             <div v-if="item.visible" class="img-container" ref="imgContainer">
               <nuxt-link :to="item.url">
@@ -32,10 +32,10 @@ export default {
       containerWidth: null
     }
   },
-  components: {},
   methods: {
     updateWidth: function () {
       if (this.$refs.imgContainer[0]) {
+        console.log('123')
         this.containerWidth = this.$refs.imgContainer[0].clientWidth
       }
     }

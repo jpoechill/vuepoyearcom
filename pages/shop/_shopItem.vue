@@ -4,10 +4,10 @@
       <transition name="fade" appear>
         <div class="row" v-for="(item, index) in $store.state.shopItems" v-if="item.itemShrtName === $route.params.shopItem" v-bind:key="index">
           <!-- Mobile -->
-          <div class="col-md-9">
+          <div class="col-md-8">
             <img v-for="(img, index) in item.itemDetailImgs" :src="img" class="lrg-thumb" v-bind:key="index" :alt="'Img: ' + img">
           </div>
-          <div class="col-md-3 item-detail-container d-md-none text-center mb-3">
+          <div class="col-md-4 item-detail-container d-md-none text-center mb-3">
             <span class="item-title">{{ item.itemName }}</span><br>
             <span class="item-price">
               {{ item.price }}
@@ -18,7 +18,7 @@
             </span>
           </div>
           <!-- Desktop -->
-          <div class="col-md-3 item-detail-container d-none d-md-block">
+          <div class="col-md-4 item-detail-container d-none d-md-block">
             <span class="item-title">{{ item.itemName }}</span><br>
             <span class="item-price">
               {{ item.price }}
