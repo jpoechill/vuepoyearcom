@@ -7,7 +7,6 @@
             <a :href="item.url" target="_blank">
               <div class="overlay-info text-center d-flex align-items-center" :style="{ height: containerWidth + 'px' }">
                 <div class="w-100 text-center p-4">
-                  <!-- <span class="item-title-main">{{item.caption}}</span><br> -->
                   <span class="item-price-main">{{item.caption}}</span>
                 </div>
               </div>
@@ -72,7 +71,6 @@ export default {
             caption: (!item.caption) ? '' : item.caption.text
           }) : null;
         })
-        // }, 0); 
     })
   },
 }
@@ -119,8 +117,6 @@ export default {
 
 .overlay-info {
   opacity: 0;
-  /* padding-bottom: 100%;
-  padding-top: 30%; */
   width: 100%;
   position: absolute;
   z-index: 12;
