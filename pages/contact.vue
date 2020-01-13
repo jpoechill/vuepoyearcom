@@ -11,8 +11,9 @@
             subject <br><input name='subject' type="text" class="w-100"><br>
             message <br><textarea name="body" class="w-100" rows="6"></textarea><br>
             <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
+            <input type="hidden" name="avoidBots" v-model="hidden">
             <input type='hidden' name='redirect_to' value='https://poyear.com' />
-            <input type='submit' value='send message!' class="w-100 font-custom" />
+            <input :disabled='isDisabled' type='submit' value='send message!' class="w-100 font-custom" />
           </form>
           </div>
         </transition>
@@ -23,7 +24,16 @@
 
 <script>
 export default {
-  components: {}
+  data: function () {
+    return {
+      hidden: ''
+    }
+  },
+  computed: {
+  	isDisabled: function(){
+    	return this.hidden !== '';
+    }
+  }
 }
 </script>
 
