@@ -4,17 +4,37 @@
       <div class="row font-custom">
         <transition name="fade" appear>
           <div class="offset-md-2 col-md-8">
-            <div class="contact-header text-center w-100">say hello, make an order, or leave a message</div>
-            <form action="https://getsimpleform.com/messages?form_api_token=d126bf3c7dcfc5d6591c7b413d244b6f" method="post">
-            name <br><input name='name' type="text" class="w-100"><br>
-            email <br><input name='email' type="text" class="w-100"><br>
-            subject <br><input name='subject' type="text" class="w-100"><br>
-            message <br><textarea name="body" class="w-100" rows="6"></textarea><br>
-            <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
-            <input type="hidden" name="avoidBots" v-model="hidden">
-            <input type='hidden' name='redirect_to' value='https://poyear.com' />
-            <input :disabled='isDisabled' type='submit' value='send message!' class="w-100 font-custom" />
-          </form>
+            <div class="contact-header text-center w-100 mb-4">
+              say hello, make an order, or leave a message
+            </div>
+
+            <form @submit.prevent="sendEmail" data-netlify-recaptcha="true">
+              <input type="hidden" name="avoidBots" value="">
+              <div>
+                <label for="name">contact info</label>
+                <input type="text" name="customerName" class="w-100" v-model="contact" id="name" aria-describedby="emailHelp">
+              </div>
+              <div class="form-group">
+                <label for="dateExpected">date expected</label>
+                <input type="text" name="dateExpected" v-model="dateExpected" class="w-100" id="dateExpected" aria-describedby="dateExpected">
+              </div>
+              <div class="form-group">
+                <label for="orderType">order type</label>
+                <input type="text" name="orderType" class="w-100" v-model="orderType" id="orderType" aria-describedby="emailHelp">
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1">description of project</label>
+                <textarea class="w-100" v-model="description" name="description" id="exampleFormControlTextarea1" rows="5"></textarea>
+              </div>
+              <div class="form-group mb-4">
+                <label for="orderType">what is 2+2?</label>
+                <input type="text" name="spamFighter" v-model="spamFighter" class="w-100" id="spamFighter" aria-describedby="spamFighter">
+              </div>
+              <div class="form-group text-center pt-2 mb-2">
+                <button type="submit" value="Send" class="text-uppercase w-100 font-custom">Submit Order Request</button>
+              </div>
+            </form>
+
           </div>
         </transition>
       </div>
@@ -23,10 +43,53 @@
 </template>
 
 <script>
+import emailjs from 'emailjs-com';
+import axios from 'axios';
+
 export default {
   data: function () {
     return {
-      hidden: ''
+      hidden: '',
+      contact: '',
+      orderType: '',
+      description: '',
+      dateExpected: '',
+      spamFighter: ''
+    }
+  },
+  methods: {
+    processSubmit: function (msg) {
+      this.contact = ''
+      this.orderType = ''
+      this.description = ''
+      this.spamFighter = ''
+
+      alert('Thank you for your order!')
+    },
+    sendEmail: function (e) {
+      let self = this
+
+      console.log(this.contact)
+      console.log(this.orderType)
+      console.log(this.description)
+      console.log(this.spamFighter)
+
+      if (this.contact !== '' && this.orderType !== '' && this.description !== '' && this.spamFighter === '4') {
+        emailjs.sendForm('poyear_biz_gmail_com', 'template_XY9SLZs0', e.target, 'user_RJcuqrS1tkjsKkpmX86tS')
+          .then((result) => {
+              console.log('SUCCESS!', result.status, result.text);
+
+              self.processSubmit()
+          }, (error) => {
+              console.log('FAILED...', error);
+
+              console.log(self)
+              // self.sendAlert()
+              alert(burgers)
+          });
+      } else {
+        alert('All form fields required.')
+      }
     }
   },
   computed: {
@@ -66,6 +129,6 @@ input[type=submit], button {
 }
 
 input[type=submit]:hover, button {
-  background-color: #EEE;
+  /* background-color: #EEE; */
 }
 </style>
