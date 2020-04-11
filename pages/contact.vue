@@ -23,11 +23,11 @@
                 <input type="text" name="orderType" class="w-100" v-model="orderType" id="orderType" aria-describedby="emailHelp">
               </div>
               <div class="form-group">
-                <label for="exampleFormControlTextarea1">description of project</label>
-                <textarea class="w-100" v-model="description" name="description" id="exampleFormControlTextarea1" rows="5"></textarea>
+                <label for="description">description of project</label>
+                <textarea class="w-100" v-model="description" name="description" id="description" rows="5"></textarea>
               </div>
               <div class="form-group mb-4">
-                <label for="orderType">what is 2+2?</label>
+                <label for="spamFighter">what is 2+2?</label>
                 <input type="text" name="spamFighter" v-model="spamFighter" class="w-100" id="spamFighter" aria-describedby="spamFighter">
               </div>
               <div class="form-group text-center pt-2 mb-2">
@@ -69,17 +69,35 @@ export default {
     sendEmail: function (e) {
       let self = this
 
+      console.log(e)
       console.log(this.contact)
       console.log(this.orderType)
       console.log(this.description)
       console.log(this.spamFighter)
 
       if (this.contact !== '' && this.orderType !== '' && this.description !== '' && this.spamFighter === '4') {
-        emailjs.sendForm('poyear_biz_gmail_com', 'template_XY9SLZs0', e.target, 'user_RJcuqrS1tkjsKkpmX86tS')
+        let emailParams = {
+          "reply_to": "reply_to_value",
+          "customerName": 'Custom Contact',
+          "dateExpected": self.dateExpected,
+          "orderType": 'Oooga booga',
+          "orderTypeA": 'Oooga booga',
+          "orderTypeB": 'Oooga booga',
+          "description": self.description,
+          "samsung": self.description,
+          "spamFighter": 10
+        }
+        
+        console.log(emailParams)
+        console.log('xxx')
+
+        emailjs.send('poyear_biz_gmail_com', 'template_XY9SLZs0', emailParams, 'user_RJcuqrS1tkjsKkpmX86tS')
           .then((result) => {
               console.log('SUCCESS!', result.status, result.text);
 
-              self.processSubmit()
+
+
+              // self.processSubmit()
           }, (error) => {
               console.log('FAILED...', error);
 
